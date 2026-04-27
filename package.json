@@ -1,0 +1,40 @@
+{
+  "name": "cloud-native-webapp-devops",
+  "version": "1.0.0",
+  "description": "Cloud-native Node.js app with CI/CD, IaC, monitoring, and alerting",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "test": "jest --runInBand",
+    "lint": "eslint src tests",
+    "db:init": "node scripts/init-db.js"
+  },
+  "keywords": [
+    "devops",
+    "nodejs",
+    "express",
+    "postgres",
+    "docker",
+    "terraform",
+    "prometheus",
+    "grafana"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "express-rate-limit": "^8.4.1",
+    "helmet": "^8.1.0",
+    "morgan": "^1.10.1",
+    "pg": "^8.20.0"
+  },
+  "devDependencies": {
+    "eslint": "^10.2.1",
+    "jest": "^30.3.0",
+    "nodemon": "^3.1.14",
+    "supertest": "^7.2.2"
+  }
+}

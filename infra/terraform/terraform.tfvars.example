@@ -1,0 +1,21 @@
+project_name      = "cloud-native-webapp"
+aws_region        = "ap-south-1"
+deployment_target = "ec2"
+
+# required
+vpc_id            = "vpc-xxxxxxxx"
+
+# EC2 mode
+public_subnet_id  = "subnet-xxxxxxxx"
+ami_id            = "ami-xxxxxxxx"
+key_name          = "your-keypair-name"
+
+# ECS mode (switch deployment_target to "ecs")
+ecs_subnet_ids    = ["subnet-xxxxxxxx", "subnet-yyyyyyyy"]
+ecs_image         = "ghcr.io/owner/repository:latest"
+
+# Optional
+allowed_ssh_cidr  = "0.0.0.0/0"
+instance_type     = "t3.micro"
+app_port          = 3000
+database_url      = "postgresql://app_user:app_password@db:5432/app_db"
